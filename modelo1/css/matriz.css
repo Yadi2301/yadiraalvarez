@@ -1,0 +1,112 @@
+body{
+    background-color: #f7b4b4;
+    text-align: center;
+    font-family: arial;
+    font-size: 30px;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #918F94;
+    font-size: 18px;
+}
+img{
+    width: 220px;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    font-size: 18px; 
+}
+.principal{
+    width: 1250px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #9168a1;
+    padding: 10px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.tarjeta{
+    width: 380px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(235, 111, 159);
+    padding: 10px;
+    margin: 10px;
+}
+
+.titulo{
+    width: 360px;
+    background-color: rgb(135, 241, 113);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.servicio{
+    width: 360px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(114, 97, 113);
+    padding: 8px;
+    margin-bottom: 20px;
+
+}
+
+.descripcion{
+    width: 350px;
+    height: 220px;
+    background-color: rgb(165, 233, 233);
+    padding: 12px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: #9780e7;
+    color: rgb(10, 9, 73);
+}
+
+h2 {
+    font-size: 18px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-weight: bold;
+}
+
+h2:hover {
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
