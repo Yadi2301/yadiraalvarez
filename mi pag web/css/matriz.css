@@ -1,0 +1,321 @@
+/* ==========================================
+   RESET Y ESTILOS GENERALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Cambia 'fondo.jpg' por el nombre exacto de tu imagen */
+    background-image: url('../img/fondo.jpg');
+    
+    /* Propiedades para ajustar la imagen al fondo */
+    background-size: cover;       /* Escala la imagen para cubrir toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita como mosaico */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll (opcional) */
+    
+    min-height: 100vh;
+    flex-direction: column;
+}
+   
+
+/* ==========================================
+   BARRA SUPERIOR (HEADER)
+   Basado en el encabezado celeste con iconos amarillos
+   ========================================== */
+.header-bar {
+    background-color: #bbf8fa; /* Celeste del boceto */
+    padding: 12px 25px;
+    border-bottom: 3px solid #000;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Botones amarillos del boceto */
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    background-color: #f3f2ed; /* Amarillo vibrante */
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1); /* Lo hace un 10% más grande */
+    color: #fff; /* O el color que prefieras */
+    background-color: #333; /* Fondo oscuro al pasar el ratón */
+}
+
+.social-label span {
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #140b0b;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+   ========================================== */
+.main-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 3px solid #f597f5;
+    border-right: 3px solid #fcd2fc
+    ;
+    background-color: #fcd2fc; /* Verde lima del boceto */
+    flex-grow: 1;
+}
+
+/* ==========================================
+   SECCIÓN HERO / PERFIL
+   ========================================== */
+.profile-hero {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px solid #000;
+}
+.profile-img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%; /* Hace la foto circular */
+    border: 4px solid #fff; /* Borde blanco alrededor */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    display: block;
+    margin: 15px auto; /* Centra la imagen vertical y horizontalmente */
+}
+.sub-title {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Estrella roja central del boceto */
+.star-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.star {
+    width: 90px;
+    height: 90px;
+    background-color: #f34747; /* Rojo del boceto */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 26px;
+    filter: drop-shadow(0px 3px 0px #000);
+}
+
+.main-title {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #000;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   SECCIÓN GRID DE TARJETAS
+   ========================================== */
+.cards-grid {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas como en la imagen */
+    gap: 20px;
+}
+
+.card {
+    background-color: #a783cc; /* Morado/Lila del boceto */
+    border: 3px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 4px 4px 0px #000;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+hr {
+    border: none;
+    border-top: 2px solid #000000; /* Línea sólida negra */
+    margin: 10px 0;
+    opacity: 1; /* Asegura que el color no se atenúe */
+}
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #030305;
+}
+
+/* Badges de habilidades */
+.badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.badge {
+    background-color: #ebdeae;
+    border: 1px solid #000;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Lista de CV */
+.resume-list, .skills-list {
+    list-style: none;
+}
+
+.resume-list li {
+    margin-bottom: 10px;
+}
+
+.resume-list strong {
+    font-size: 13px;
+    color: #000;
+}
+
+.resume-list p {
+    font-size: 12px;
+    color: #000000;
+}
+
+.skills-list li {
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================
+   FORMULARIO DE CONTACTO
+   ========================================== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 13px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background-color: #f8fafc;
+    border-color: #2563eb;
+}
+
+.submit-btn {
+    background-color: #facc15;
+    color: #000;
+    font-weight: bold;
+    border: 2px solid #000;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #000;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #eab308;
+}
+
+.submit-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer-bar {
+    background-color: #87ceeb;
+    border-top: 3px solid #000;
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    .main-container {
+        border-left: none;
+        border-right: none;
+    }
+
+    /* En celulares, las 4 tarjetas se muestran en 1 sola columna */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .sub-title {
+        font-size: 16px;
+    }
+
+    .main-title {
+        font-size: 22px;
+    }
+
+    .header-container {
+        flex-direction: row;
+    }
+}
