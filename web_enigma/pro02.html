@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 02</title>
+</head>
+<body>
+
+    <script>
+        let precioCuaderno = Number(prompt("Precio del cuaderno: ","6"));
+        let cantCuadernos = Number(prompt("Cantidad de cuadernos: ","3"));
+        let precioLapicero = Number(prompt("Precio del lapicero: ","1"));
+        let cantLapiceros = Number(prompt("Cantidad de lapiceros: ","8"));
+        let totalCuadernos;
+        let totalLapiceros;
+        let totalGeneral;
+
+        totalCuadernos = precioCuaderno * cantCuadernos;
+        totalLapiceros = precioLapicero * cantLapiceros;
+        totalGeneral = totalCuadernos + totalLapiceros;
+
+        document.write("Total Cuadernos: S/ " + totalCuadernos + "<br>");
+        document.write("Total Lapiceros: S/ " + totalLapiceros + "<br>");
+        document.write("Total de la compra: S/ " + totalGeneral + "<br>");
+    </script>
+
+    <br>
+    <a href="index.html">Regresar al index</a>
+
+</body>
+</html>

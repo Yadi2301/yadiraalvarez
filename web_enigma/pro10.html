@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 10</title>
+</head>
+<body>
+
+    <script>
+        let dias = Number(prompt("Cantidad de días del viaje: ","7"));
+        let alimentacionDiaria = Number(prompt("Gasto diario en alimentación: ","85"));
+        let transporteDiario = Number(prompt("Gasto diario en transporte: ","60"));
+        let alojamientoDiario = Number(prompt("Gasto diario en alojamiento: ","40"));
+
+        let totalAlimentacion;
+        let totalTransporte;
+        let totalAlojamiento;
+        let presupuestoTotal;
+
+        totalAlimentacion = alimentacionDiaria * dias;
+        totalTransporte = transporteDiario * dias;
+        totalAlojamiento = alojamientoDiario * dias;
+        presupuestoTotal = totalAlimentacion + totalTransporte + totalAlojamiento;
+
+        document.write("Días de viaje: " + dias + "<br>");
+        document.write("Gasto total en alimentación: S/ " + totalAlimentacion + "<br>");
+        document.write("Gasto total en transporte: S/ " + totalTransporte + "<br>");
+        document.write("Gasto total en alojamiento: S/ " + totalAlojamiento + "<br>");
+        document.write("Presupuesto total del viaje: S/ " + presupuestoTotal + "<br>");
+    </script>
+
+    <br>
+    <a href="index.html">Regresar al index</a>
+
+</body>
+</html>
