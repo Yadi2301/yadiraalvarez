@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/matriz.css" />
+        <link rel="shortcut icon" href="../img/Icono.png" type="image/x-icon" />
+        <link rel="preconnect" href="https://googleapis.com" />
+        <link rel="preconnect" href="https://gstatic.com" crossorigin />
+        <link
+            href="https://googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>TecnoPro - Carrito de compras</title>
+        <style>
+            .boleta-container {
+                display: none;
+                margin-top: 20px;
+                padding: 20px;
+                background-color: #e2f2f8;
+                border: 1px dashed var(--dark);
+                border-radius: 8px;
+                font-family: monospace;
+                font-size: 13px;
+                box-sizing: border-box;
+            }
+            .boleta-container p {
+                margin: 4px 0;
+            }
+            .boleta-container h4 {
+                margin: 0 0 8px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header-principal">
+            <div class="header-principal__nav-container">
+                <div class="header-principal__logo-container">
+                    <img
+                        src="../img/Logo.png"
+                        alt="TecnoPro Logo"
+                        class="header-principal__logo logo-img"
+                    />
+                </div>
+                <div class="solucion-nav">
+                    <button
+                        class="menu-toggle"
+                        id="menu-toggle"
+                        aria-label="Abrir menú"
+                        aria-expanded="false"
+                    >
+                        <span class="menu-toggle__barra"></span>
+                        <span class="menu-toggle__barra"></span>
+                        <span class="menu-toggle__barra"></span>
+                    </button>
+                    <nav class="header-principal__nav">
+                        <ul class="header-principal__nav-list" id="menu-lista">
+                            <li class="header-principal__nav-item">
+                                <a href="../index.html#pc">Productos</a>
+                            </li>
+                            <li class="header-principal__nav-item">
+                                <a href="../index.html#ofertas">Ofertas</a>
+                            </li>
+                            <li class="header-principal__nav-item">
+                                <a href="../index.html#nosotros">Nosotros</a>
+                            </li>
+                            <li class="header-principal__nav-item">
+                                <a href="../index.html#contacto">Contacto</a>
+                            </li>
+                            <li
+                                class="header-principal__nav-item nav-sesion"
+                                id="nav-sesion"
+                                data-login="login.html"
+                            ></li>
+                            <li class="header-principal__nav-item">
+                                <a href="carrito.html"
+                                    ><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"
+                                        class="svg"
+                                    >
+                                        <path
+                                            d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z"
+                                        /></svg
+                                ></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="carrito-hero">
+                <div class="carrito-hero-container">
+                    <h1>Tu <span>Carrito</span> de compras</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="carrito-layout">
+            <section class="carrito-tabla-card">
+                <h2>Resumen del pedido</h2>
+                <div class="carrito-tabla-wrap">
+                    <table class="carrito-tabla">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-carrito"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Monto Total</td>
+                                <td id="monto-total">S/. 0.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <section class="carrito-form-card">
+                <h2>Datos de envío</h2>
+                <!-- <p id="mensaje-vacio" hidden>
+                    No has agregado ningún producto al carrito.
+                    <a href="../index.html">Seguir comprando</a>
+                </p> -->
+                <form class="carrito-form" id="compra-form">
+                    <label>
+                        Nombre
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Tu nombre completo"
+                        />
+                    </label>
+                    <label>
+                        Correo
+                        <input
+                            type="email"
+                            id="correo"
+                            placeholder="tucorreo@ejemplo.com"
+                        />
+                    </label>
+                    <label>
+                        Dirección
+                        <input
+                            type="text"
+                            id="direccion"
+                            placeholder="Av. Ejemplo 123"
+                        />
+                    </label>
+                    <label>
+                        Selecciona un método de pago
+                        <select id="pago">
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Yape o Plin">Yape o Plin</option>
+                            <option value="Tarjeta de débito o crédito">
+                                Tarjeta de débito o crédito
+                            </option>
+                        </select>
+                    </label>
+                    <button type="submit" class="boton-comprar">
+                        Realizar compra
+                    </button>
+                </form>
+                <div id="boleta" class="boleta-container"></div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>&copy; 2026 TECNOPRO — Todos los derechos reservados.</p>
+        </footer>
+        <script src="../js/menu.js"></script>
+        <script src="../js/sesion.js"></script>
+        <script src="../js/pedido.js"></script>
+
+        <script>
+            document
+                .getElementById("compra-form")
+                .addEventListener("submit", function (evento) {
+                    evento.preventDefault();
+                    generarBoleta();
+                });
+
+            function generarBoleta() {
+                const cliente = document.getElementById("nombre").value;
+                const correo = document.getElementById("correo").value;
+                const direccion = document.getElementById("direccion").value;
+                const pago = document.getElementById("pago").value;
+                const productos =
+                    JSON.parse(localStorage.getItem("listProducts")) || {};
+
+                if (Object.keys(productos).length == 0) {
+                    alert("No has agregado ningún producto al carrito.");
+                    return;
+                }
+
+                if (cliente == "" || correo == "" || direccion == "") {
+                    alert("Por favor complete todos los datos de envío.");
+                    return;
+                }
+
+                let subtotal = 0;
+                let detalle = "";
+
+                for (const codigo in productos) {
+                    const producto = productos[codigo];
+                    const importe = producto.precio * producto.cantidad;
+                    subtotal += importe;
+                    detalle += `<p>${codigo} - ${producto.nombre} x${producto.cantidad} - S/. ${importe.toFixed(2)}</p>`;
+                }
+
+                const igv = subtotal * 0.18;
+                const neto = subtotal + igv;
+
+                const boleta = document.getElementById("boleta");
+                boleta.style.display = "block";
+
+                let salida = "";
+                salida += "<h4>TECNOPRO - BOLETA DE VENTA</h4>";
+                salida += "<p>----------------------------------</p>";
+                salida += `<p><b>Cliente:</b> ${cliente}</p>`;
+                salida += `<p><b>Correo:</b> ${correo}</p>`;
+                salida += `<p><b>Dirección:</b> ${direccion}</p>`;
+                salida += `<p><b>Pago:</b> ${pago}</p>`;
+                salida += "<p>----------------------------------</p>";
+                salida += detalle;
+                salida += "<p>----------------------------------</p>";
+                salida += `<p><b>Subtotal S/:</b> ${subtotal.toFixed(2)}</p>`;
+                salida += `<p><b>IGV 18% S/:</b> ${igv.toFixed(2)}</p>`;
+                salida += `<p><b>TOTAL A PAGAR S/:</b> ${neto.toFixed(2)}</p>`;
+                salida += "<p>----------------------------------</p>";
+                salida += "<p>¡Gracias por su compra!</p>";
+
+                boleta.innerHTML = salida;
+            }
+        </script>
+    </body>
+</html>

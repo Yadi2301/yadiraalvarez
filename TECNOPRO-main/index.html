@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/matriz.css" />
+        <link rel="shortcut icon" href="img/Icono.png" type="image/x-icon" />
+        <link rel="preconnect" href="https://googleapis.com" />
+        <link rel="preconnect" href="https://gstatic.com" crossorigin />
+        <link href="https://googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+        <title>TecnoPro - Tecnología a tu alcance</title>
+    </head>
+    <body>
+        <header class="header-principal">
+            <div class="header-principal__nav-container">
+                <div class="header-principal__logo-container">
+                    <img src="img/Logo.png" alt="TecnoPro Logo" class="header-principal__logo logo-img" />
+                </div>
+                <div class="solucion-nav">
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                        <span class="menu-toggle__barra"></span>
+                        <span class="menu-toggle__barra"></span>
+                        <span class="menu-toggle__barra"></span>
+                    </button>
+                    <nav class="header-principal__nav">
+                        <ul class="header-principal__nav-list" id="menu-lista">
+                            <li class="header-principal__nav-item"><a href="#">Productos</a></li>
+                            <li class="header-principal__nav-item"><a href="#">Ofertas</a></li>
+                            <li class="header-principal__nav-item"><a href="#">Nosotros</a></li>
+                            <li class="header-principal__nav-item"><a href="#">Contacto</a></li>
+                            <li class="header-principal__nav-item nav-sesion" id="nav-sesion" data-login="pages/login.html"></li>
+                            <li class="header-principal__nav-item"><a href="pages/carrito.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="svg"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z"/></svg></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-principal__banner">
+                <div class="header-principal__banner-container">
+                    <div class="header-principal__banner-content">
+                        <h1 class="header-principal__banner-titulo">
+                            Bienvenidos a <br><span class="header-principal__banner-titulo--destacado">TECNOPRO</span>
+                        </h1>
+                        <p class="header-principal__banner-texto">
+                            Tu tienda de tecnología de confianza, donde la innovación y la calidad se encuentran.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section-container">
+            <div>
+                <h2 class="section-titulo">Productos <span>Destacados</span></h2>
+                <p class="productos-destacados-descripcion">Descubre nuestra selección de productos más populares.</p>
+            </div>
+            <div class="principal">
+                <div class="tarjeta" data-codigo="000001" data-nombre="Monitor Gear 27&quot; FHD" data-precio="269.90">
+                    <div class="servicio">
+                        <img src="img/monitor1.jpg" alt="Monitor Gear 27\"" />
+                    </div>
+                    <h3 class="titulo">Monitor Gear 27" FHD</h3>
+                    <div class="descripcion">
+                        <p>S/. 269.90</p>
+                        <button class="boton-comprar">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="tarjeta" data-codigo="000002" data-nombre="Teclado Inalámbrico Logitech" data-precio="259.00">
+                    <div class="servicio">
+                        <img src="img/teclado2.webp" alt="Teclado Inalámbrico Logitech" />
+                    </div>
+                    <h3 class="titulo">Teclado Inalámbrico Logitech</h3>
+                    <div class="descripcion">
+                        <p>S/. 259.00</p>
+                        <button class="boton-comprar">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="tarjeta" data-codigo="000003" data-nombre="Mouse Gamer Logitech G502" data-precio="158.00">
+                    <div class="servicio">
+                        <img src="img/mouse1.webp" alt="Mouse Gamer Logitech G502" />
+                    </div>
+                    <h3 class="titulo">Mouse Gamer Logitech G502</h3>
+                    <div class="descripcion">
+                        <p>S/. 158.00</p>
+                        <button class="boton-comprar">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="tarjeta" data-codigo="000004" data-nombre="Laptop Lenovo IdeaPad Slim" data-precio="2038.00">
+                    <div class="servicio">
+                        <img src="img/laptop1.png" alt="Laptop Lenovo IdeaPad Slim" />
+                    </div>
+                    <h3 class="titulo">Laptop Lenovo IdeaPad Slim</h3>
+                    <div class="descripcion">
+                        <p>S/. 2,038.00</p>
+                        <button class="boton-comprar">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="seccion-categorias-menu">
+            <a href="#pc">PC</a>
+            <a href="#monitor">Monitores</a>
+            <a href="#teclado">Teclados</a>
+            <a href="#mouse">Mouses</a>
+            <a href="#laptop">Laptops</a>
+            <a href="#smartphones">Smartphones</a>
+        </div>
+
+        <div class="contenedor-productos-nuevos" id="pc">
+            <h2>PC</h2>
+            <div class="grilla-dos-columnas">
+                <div class="tarjeta-producto" data-codigo="000005" data-nombre="PC Gamer RGB Ultimate" data-precio="4500.00">
+                    <img src="img/imagen_pc_gamer.png" alt="PC Gamer RGB Ultimate" />
+                    <h3>PC Gamer RGB Ultimate</h3>
+                    <p>S/. 4,500.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+                <div class="tarjeta-producto" data-codigo="000006" data-nombre="PC Streamer Setup" data-precio="3200.00">
+                    <img src="img/imagen pc.png" alt="PC Streamer Setup" />
+                    <h3>PC Streamer Setup</h3>
+                    <p>S/. 3,200.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-productos-nuevos" id="monitor">
+            <h2>Monitores</h2>
+            <div class="grilla-dos-columnas">
+                <div class="tarjeta-producto" data-codigo="000007" data-nombre="Monitor Gear 27&quot; FHD" data-precio="1200.00">
+                    <img src="img/monitor1.jpg" alt="Monitor Gear 27\" FHD" />
+                    <h3>Monitor Gear 27" FHD</h3>
+                    <p>S/. 1,200.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+                <div class="tarjeta-producto" data-codigo="000008" data-nombre="Monitor Gamer Gear Gamer 180Hz" data-precio="850.00">
+                    <img src="img/monitor2.jpg" alt="Monitor Gamer Gear Gamer 180Hz" />
+                    <h3>Monitor Gamer Gear Gamer 180Hz</h3>
+                    <p>S/. 850.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-productos-nuevos" id="teclado">
+            <h2>Teclados</h2>
+            <div class="grilla-dos-columnas">
+                <div class="tarjeta-producto" data-codigo="000009" data-nombre="Teclado Gamer Mecánico Inalambrico Primus Gaming" data-precio="250.00">
+                    <img src="img/teclado1.jpg" alt="Teclado Gamer Mecánico" />
+                    <h3>Teclado Gamer Mecánico Inalambrico Primus Gaming</h3>
+                    <p>S/. 250.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+                <div class="tarjeta-producto" data-codigo="000010" data-nombre="Teclado Inalámbrico Logitech Signature Slim" data-precio="180.00">
+                    <img src="img/teclado2.webp" alt="Teclado Inalámbrico Logitech" />
+                    <h3>Teclado Inalámbrico Logitech Signature Slim</h3>
+                    <p>S/. 180.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-productos-nuevos" id="mouse">
+            <h2>Mouses</h2>
+            <div class="grilla-dos-columnas">
+                <div class="tarjeta-producto" data-codigo="000011" data-nombre="Mouse Gamer Logitech G502 Hero" data-precio="90.00">
+                    <img src="img/mouse1.webp" alt="Mouse Gamer Logitech G502" />
+                    <h3>Mouse Gamer Logitech G502 Hero</h3>
+                    <p>S/. 90.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+                <div class="tarjeta-producto" data-codigo="000012" data-nombre="Mouse Gamer Razer DeathAdder Essential" data-precio="120.00">
+                    <img src="img/mouse2.webp" alt="Mouse Gamer Razer" />
+                    <h3>Mouse Gamer Razer DeathAdder Essential</h3>
+                    <p>S/. 120.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-productos-nuevos" id="laptop">
+            <h2>Laptops</h2>
+            <div class="grilla-dos-columnas">
+                <div class="tarjeta-producto" data-codigo="000013" data-nombre="Laptop Lenovo IdeaPad Slim 3 Ryzen 5 40 8GB RAM 256GB SSD" data-precio="2499.00">
+                    <img src="img/laptop1.png" alt="Laptop Lenovo" />
+                    <h3>Laptop Lenovo IdeaPad Slim 3 Ryzen 5 40 8GB RAM 256GB SSD</h3>
+                    <p>S/. 2,499.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+                <div class="tarjeta-producto" data-codigo="000014" data-nombre="Laptop ASUS TUF Ryzen 7 170 RTX 4050 6GB 16GB RAM 512GB SSD" data-precio="2899.00">
+                    <img src="img/laptop2.webp" alt="Laptop ASUS TUF" />
+                    <h3>Laptop ASUS TUF Ryzen 7 170 RTX 4050 6GB 16GB RAM 512GB SSD</h3>
+                    <p>S/. 2,899.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-productos-nuevos" id="smartphones">
+            <h2>Smartphones</h2>
+            <div class="grilla-dos-columnas">
+                <div class="tarjeta-producto" data-codigo="000015" data-nombre="iPhone 17 Pro Max 256GB" data-precio="1599.00">
+                    <img src="img/Smartphones1.webp" alt="iPhone 17 Pro Max" />
+                    <h3>iPhone 17 Pro Max 256GB</h3>
+                    <p>S/. 1,599.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+                                <div class="tarjeta-producto" data-codigo="000016" data-nombre="Samsung Galaxy S26 Ultra 512gb" data-precio="2199.00">
+                    <img src="img/Smartphones2.webp" alt="Samsung Galaxy S26" />
+                    <h3>Samsung Galaxy S26 Ultra 512gb</h3>
+                    <p>S/. 2,199.00</p>
+                    <button class="boton-comprar ">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: OFERTAS DE LA SEMANA -->
+        <section class="ofertas-semana">
+            <h2>Ofertas de la <span>Semana</span></h2>
+            <div class="ofertas-container">
+                <div class="tarjeta-oferta" data-codigo="000017" data-nombre="Teclado Mecánico Kitty" data-precio="180.00">
+                    <img src="img/imagen teclado.webp" alt="Teclado Mecánico Kitty" />
+                    <h3>Teclado Mecánico Kitty</h3>
+                    <div class="precios-box">
+                        <p class="precio-antes">Antes: S/. 250.00</p>
+                        <p class="precio-ahora">Ahora: S/. 180.00</p>
+                    </div>
+                    <button href="#" class="boton-comprar">¡Aprovechar!</button>
+                </div>
+
+                <div class="tarjeta-oferta" data-codigo="000018" data-nombre="PC Streamer Setup" data-precio="3240.00">
+                    <img src="img/imagen pc.png" alt="PC Streamer Setup" />
+                    <h3>PC Streamer Setup</h3>
+                    <div class="precios-box">
+                        <p class="precio-antes">Antes: S/. 3,800.00</p>
+                        <p class="precio-ahora">Ahora: S/. 3,240.00</p>
+                    </div>
+                    <button href="#" class="boton-comprar">¡Aprovechar!</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: SOBRE NOSOTROS -->
+        <section class="sobre-nosotros">
+            <h2>Sobre <span>Nosotros</span></h2>
+            <div class="nosotros-grid">
+                <div class="nosotros-columna">
+                    <h3>Quiénes somos</h3>
+                    <p>Somos una tienda líder en distribución de tecnología de última generación en el país.</p>
+                </div>
+                <div class="nosotros-columna">
+                    <h3>A qué nos dedicamos</h3>
+                    <p>Ofrecemos soluciones tecnológicas hardware y software tanto para usuarios como profesionales.</p>
+                </div>
+                <div class="nosotros-columna">
+                    <h3>Qué ofrecemos</h3>
+                    <p>Equipos de alta gama con garantía certificada, soporte técnico especializado y envíos rápidos.</p>
+                </div>
+                <div class="nosotros-columna">
+                    <h3>Público objetivo</h3>
+                    <p>Dirigido a estudiantes, profesionales del entorno digital, gamers y empresas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pie de página -->
+        <footer>
+            <p>&copy; 2026 TECNOPRO — Todos los derechos reservados.</p>
+        </footer>
+        <script src="js/menu.js"></script>
+        <script src="js/sesion.js"></script>
+        <script src="js/carrito.js"></script>
+    </body>
+</html>
+
